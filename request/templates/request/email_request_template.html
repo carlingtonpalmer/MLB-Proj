@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      h5.message {
+        margin-top: -10px;
+      }
+      ul.user-list {
+        margin-top: -10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Hello,</h3>
+    {% block content %}
+    <h5 class="message">
+      <strong>{{user.first_name}} {{user.last_name}}</strong> has requested a
+      pickup.
+    </h5>
+
+    <p>
+      Phone #: <strong>{{user.phone_no}}</strong>
+      <br />
+      Request type: <strong>{{request_type}}</strong>
+      <br />
+      Pickup Location: <strong>{{pickup}}</strong>
+      <br />
+      Drop-off Location: <strong>{{dropoff}}</strong>
+    </p>
+    <!-- <h5 class="message">User {{user.first_name}},  have signed up for Product ({Supplemental Life}).</h5>   -->
+
+    {% endblock content %}
+    <h5>Thanks, <br />Bucket App.</h5>
+  </body>
+</html>
